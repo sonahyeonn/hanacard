@@ -1,22 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/font/stylesheet.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>하나카드</title>
+	<!-- slick -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+	<!-- css -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- 하나폰트연결 -->
+	<link rel="stylesheet" href="css/font/stylesheet.css">
+	<!-- 폰트어썸 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+	<!-- 파비콘 -->
+	<link rel="shortcut icon" href="img/favicon/favicon-96x96.png" type="image/x-icon">
+
+	<!-- open graph(오픈 그래프) -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://hanacard230620.netlify.app/">
+	<meta property="og:title" content="내가만든 하나카드">
+	<meta property="og:description" content="하나카드 사이트 연습">
+	<meta property="og:image" content="img/favicon/favicon-96x96.png">
+	<!-- og는 open graph의 약자, 오픈 그래프의 속성을 이용해서 더 많은 정보를 입력할 수 있다.
+    og:type -> 페이지의 유형(웹사이트, 비디오...)
+    og:url -> 페이지의 주소(서버주소)
+    og:title -> 페이지의 이름(제목)
+    og:description -> 페이지의 간단한 설명
+    og:image -> 페이지의 대표 이미지 -->
 
 
-    <!-- open graph(오픈 그래프) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:title" content="내가만든 하나카드">
-    <meta property="og:description" content="하나카드 사이트 연습">
-    <meta property="og:image" content="img/favicon/favicon-96x96.png">
+	<!-- 조건에 해당할때는 실행함 -->
+	<!-- html5태그는 구IE (IE6, IE7, IE8)에서는 인식하지 못하는 태그들(예를들어 시멘틱 태그)을 자바스크립트를 사용하여 html5태그를 인식할 수 있도록 html5shiv를 설정한다 -->
+
+	<!-- 조건부주석문 -->
+	<!--[if lt IE 7]>
+    <script>
+        alert("Please Upgrade Your BROWSER!!")
+    </script>
+    <![endif] -->
+
+	<!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif] -->
 
 </head>
+
 <body>
-    <h1>하나카드</h1>
+	<!-- 	<div class="scroll">
+		<div><a href="#header">header</a></div>
+		<div><a href="#banner">banner</a></div>
+		<div><a href="#contents">contents</a></div>
+	</div> -->
+	<!-- 바깥의 큰 영역을 잡아주기도 하지만 내부적으로 다음 영역으로 넘어갈 수 있는 역할을 (영역을 구분짓는) 하는것이 id -->
+	<!-- 갇히는 영역안에 영역을 잡아줄때 class -->
+	<div id="wrap">
+
+		<header id="header">
+			<div class="container">
+				<div class="header clearfix">
+					<ul class="list1">
+						<li class="green"><a href="#">개인</a></li>
+						<li><a href="#">기업</a></li>
+						<li><a href="#">가맹점</a></li>
+					</ul>
+					<ul class="list2">
+						<li class="log"><a href="#">로그인</a></li>
+						<li><a href="#">상품공시실</a></li>
+						<li><a href="#">금융소비보호</a></li>
+						<li><a href="#">English</a></li>
+					</ul>
+				</div>
+			</div>
+		</header><!-- header -->
+
+		<div id="banner">
+			<div class="container">
+				<div class="ban_left">
+					<div class="obj">
+						<p class="ob ob1">
+							<img src="img/ev49_obj_01.png" alt="구름1">
+						</p>
+						<p class="ob ob2">
+							<img src="img/ev49_obj_02.png" alt="구름2">
+						</p>
+						<p class="ob ob3">
+							<img src="img/ev49_obj_03.png" alt="달력">
+						</p>
+						<p class="ob ob3-1">
+							<img src="img/ev43_obj_02.png" alt="쇼핑할땐">
+						</p>
+						<p class="ob ob3-2">
+							<img src="img/ev43_obj_03.png" alt="타이틀">
+						</p>
+						<p class="ob ob3-3">
+							<img src="img/ev43_obj_04.png" alt="1">
+						</p>
+						<p class="ob ob3-4">
+							<img src="img/ev43_obj_04.png" alt="1">
+						</p>
+						<p class="ob ob4">
+							<img src="img/ev49_obj_04.png" alt="우산">
+						</p>
+						<p class="ob ob5">
+							<img src="img/ev49_obj_05.png" alt="슈트케이스">
+						</p>
+						<p class="ob ob6">
+							<img src="img/ev49_obj_06.png" alt="자동차">
+						</p>
+						<p class="ob ob7">
+							<img src="img/ev49_obj_07.png" alt="선물">
+						</p>
+						<p class="ob ob8">
+							<img src="img/ev49_obj_08.png" alt="박스">
+						</p>
+						<p class="ob ob9">
+							<img src="img/ev49_obj_09.png" alt="가방">
+						</p>
+						<p class="ob ob10">
+							<img src="img/ev49_obj_10.png" alt="바람">
+						</p>
+						<p class="ob ob11">
+							<img src="img/ev49_obj_11.png" alt="바람2">
+						</p>
+						<p class="ob ob12">
+							<img src="img/ev49_obj_12.png" alt="원">
+						</p>
+						<p class="ob ob13">
+							<img src="img/ev49_obj_13.png" alt="써프라이즈">
+						</p>
+					</div>
+
+				</div><!-- ban_left -->
+				<div class="ban_right">
+					<div class="br_tit">
+						<h3>VIVA G platinum <br>체크카드</h3>
+						<p>홈페이지/모바일웹에서 카드를 최초로 발급하시면 <br><strong>연회비 100% 캐쉬백</strong></p>
+
+						<div class="login_btn">
+							<ul>
+								<li class="lb1"><a href="#">로그인</a></li>
+								<li class="lb2"><a href="#">회원가입</a></li>
+							</ul>
+						</div><!-- login_btn -->
+					</div><!-- br_tit -->
+					<div class="br_btn">
+						<ul class="clearfix">
+							<li><a href="#">이용대금명세서</a></li>
+							<li><a href="#">결제예정금액</a></li>
+							<li><a href="#">카드이용내역</a></li>
+							<li><a href="#">한도상향</a></li>
+						</ul>
+					</div><!-- br_btn -->
+				</div><!-- ban_right -->
+			</div><!-- container -->
+		</div><!-- banner -->
+
+		<div id="contents">
+			<div id="cont1">
+				<div class="container">
+
+					<nav id="nav">
+						<ul class="gnb">
+							<!-- 메인메뉴, GNB, (Global Navigation Bar) -->
+							<li><a href="#">마이페이지</a></li>
+							<li><a href="#">카드</a></li>
+							<li><a href="#">금융</a></li>
+							<li><a href="#">라이프</a></li>
+							<li><a href="#">모바일</a></li>
+							<li><a href="#">고객센터</a></li>
+						</ul>
+						<ul class="gnb_right">
+							<li class="gr1"><a href="#">간편서비스</a></li>
+							<li class="gr2"><a href="#">전체메뉴 <i class="fas fa-bars"></i></a></li>
+						</ul>
+						<a href="#" class="gnb_search">
+							<span class="ir">통합검색</span>
+							<i class="ir">레이어팝업 열림</i>
+						</a>
+						<a href="#" class="gnb_event">
+							Event <i class="fas fa-plus"></i>
+						</a>
+					</nav><!-- nav -->
+
+					<div id="card" class="clearfix">
+						<div class="card_img">
+							<h4>추천카드</h4>
+							<div class="card_banner">
+								<ul class="clearfix">
+									<li>
+										<a href="#">
+											<img src="img/card01.png" alt="카드01">
+											<em>국내외 전 가맹점 0.7%</em>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="img/card02.png" alt="카드02">
+											<em>SK텔레콤 2천~1만5천</em>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="img/card03.png" alt="카드03">
+											<em>온라인 쇼핑/마트 주중</em>
+										</a>
+									</li>
+								</ul>
+							</div><!-- card_banner -->
+
+							<div class="card_link">
+								<ul class="clearfix">
+									<li><a href="#">카드발급조회</a></li>
+									<li><a href="#">카드사용등록</a></li>
+									<li><a href="#">분실도난</a></li>
+									<li><a href="#">카드비밀번호 등록/변경</a></li>
+								</ul>
+							</div><!-- card_link -->
+							<a href="#" class="cardmore_btn ir">추천카드</a>
+						</div><!-- card_img -->
+
+						<div class="card_desc">
+							<dl>
+								<dt>원하는 365 언제나!</dt>
+								<dd class="cd1"> 이번달, 지출증가<br>
+									쉽고 편리하게 대출을 받을 수 있을까? </dd>
+								<dd class="cd2">
+									<ul>
+										<li>
+											<a href="#">단기카드대출</a>
+											<a href="#">장기카드대출</a>
+											<a href="#">일부결제금액이월 약정</a>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</div><!-- card_desc -->
+					</div><!-- card -->
+
+					<div id="event" class="clearfix">
+
+						<div class="event_box1">
+							<div class="eb_banner1">
+								<p class="eb_desc">원하는 정보와 쌓이는 혜택</p>
+								<h4 class="eb_tit">웹 회원가입</h4>
+							</div><!-- eb_banner1 -->
+							<div class="eb_banner2">
+								<p class="eb_desc">유용한 정보를 미리 준비하세요!</p>
+								<h4 class="eb_tit">해외 이용 가이드</h4>
+							</div><!-- eb_banner2 -->
+							<div class="eb_banner3">
+								<p class="eb_desc">특별한 혜택을 누리세요</p>
+								<h4 class="eb_tit">VIP Service</h4>
+							</div><!-- eb_banner3 -->
+						</div><!-- event_box1 -->
+
+						<div class="event_box2">
+							<div class="eb_banner4">
+								<div class="eb_icon">
+									<ul class="clearfix">
+										<li class="ei1">
+											<a href="#" title="새창열기">Event <i class="fas fa-plus"></i></a>
+										</li>
+										<li class="ei2">
+											<a href="#" title="새창열기">당첨자 확인</a>
+										</li>
+									</ul>
+								</div><!-- eb_icon -->
+
+								<div class="eb_slider">
+									<div class="eb_slider_list">
+										<div>your content</div>
+										<div>your content</div>
+										<div>your content</div>
+									</div>
+								</div><!-- eb_slider -->
+							</div><!-- eb_banner4 -->
+							<div class="eb_banner5"></div><!-- eb_banner5 -->
+						</div><!-- event_box2 -->
+
+						<div class="event_box3"></div><!-- event_box3 -->
+
+					</div><!-- event -->
+				</div>
+			</div>
+		</div><!-- contents -->
+	</div><!-- wrap -->
+
+
+
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
+
 </html>

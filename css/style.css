@@ -7,5 +7,840 @@ font-family: 'Noto Sans KR', sans-serif; */
 
 @import url(reset.css);
 
+/* html {
+	scroll-behavior: smooth;
+  }
+ */
 
-h1{font-family: 'Hana2.0 B';}
+/* 전체 레이아웃 */
+#wrap {}
+
+#header {}
+
+#banner {
+	background-color: #a0d1ee;
+	height: 470px;
+}
+
+.contents {}
+
+
+/* contents layout */
+#cont1 {
+	height: 940px;
+	background-color: #f5f6f8;
+}
+
+/* 중심영역 */
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* clearfix */
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* header */
+.header {
+	font-family: 'Hana2.0 B';
+	padding: 7px 0;
+}
+
+.header ul {}
+
+.header ul li {
+	float: left;
+	background: url(../img/bar1.gif) no-repeat 0 10px;
+}
+
+
+
+.header ul li a {
+	display: block;
+	padding: 8px 15px;
+}
+
+/* a태그는 버튼 역할을 하므로 디스플레이를 블록으로 꼭 바꿔줘야 한다 왜냐하면 인라인 요소이기 때문에 글자 이외에 부분에도 버튼으로 기능을 해야하기 때문 */
+
+.header ul.list1 {
+	float: left;
+}
+
+.header ul.list1 li {}
+
+.header ul.list1 li:nth-child(2) {
+	background: none;
+}
+
+.header ul.list1 li a {}
+
+.header ul.list1 li.green a {
+	background-color: #00907f;
+	color: #fff;
+	border-radius: 3px;
+}
+
+.header ul.list2 {
+	float: right;
+}
+
+.header ul.list2 li {}
+
+.header ul.list2 li a {}
+
+.header ul.list2 li.log a {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px 10px;
+	margin: 5px 0;
+	margin-right: 13px;
+}
+
+
+@keyframes gulum {
+	0% {
+		transform: translateX(-10px);
+	}
+
+	50% {
+		transform: translateX(10px);
+	}
+
+	100% {
+		transform: translateX(-10px);
+	}
+}
+
+@keyframes dalyunk {
+	0% {
+		transform: translateY(-300px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes toleft {
+	0% {
+		transform: translateX(500px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes bToBottom {
+	0% {
+		transform: translateY(-500px);
+		opacity: 0;
+	}
+
+	70% {
+		transform: translateY(30px);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes car {
+	0% {
+		transform: translateX(500px);
+		opacity: 0;
+	}
+
+	85% {
+		transform: translateX(-180px);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes toBeLeft {
+	0% {
+		transform: translate(110px, -100px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+}
+
+@keyframes toBottom {
+	0% {
+		transform: translateY(-100px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(359deg);
+	}
+}
+
+@keyframes baram {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	10% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+
+
+/* banner */
+.ban_left {
+	position: relative;
+}
+
+.ban_left .ob {
+	position: absolute;
+	left: -300px;
+}
+
+.ban_left .ob1 {
+	/* 구름1 */
+	left: 120px;
+	top: 161px;
+	animation: gulum 3s 0.3s linear infinite both;
+}
+
+.ban_left .ob2 {
+	/* 구름2 */
+	left: 100px;
+	top: 217px;
+	animation: gulum 3s 0.6s linear infinite both;
+}
+
+.ban_left .ob3 {
+	/* 달력 */
+	left: 200px;
+	top: 78px;
+	animation: dalyunk 0.5s 0.5s both;
+}
+
+.ban_left .ob3-1 {
+	/* 쇼핑할땐 */
+	left: 250px;
+	top: 112px;
+	animation: toleft 0.5s 0.7s both;
+}
+
+.ban_left .ob3-2 {
+	/* 타이틀 */
+	left: 250px;
+	top: 140px;
+	animation: toleft 0.5s 0.9s both;
+}
+
+.ban_left .ob3-3 {
+	/* 1 */
+	left: 255px;
+	top: 213px;
+	animation: bToBottom 0.5s 0.7s both;
+}
+
+.ban_left .ob3-4 {
+	/* 1 */
+	left: 307px;
+	top: 213px;
+	animation: bToBottom 0.5s 0.9s both;
+}
+
+.ban_left .ob4 {
+	/* 우산 */
+	left: 430px;
+	top: 302px;
+	animation: toBeLeft 0.3s 2.8s both;
+}
+
+.ban_left .ob5 {
+	/* 슈트케이스 */
+	left: 350px;
+	top: 317px;
+	animation: toBottom 0.3s 2.8s both;
+}
+
+.ban_left .ob6 {
+	/* 자동차 */
+	left: 220px;
+	top: 343px;
+	animation: car 0.6s 1.8s both;
+}
+
+.ban_left .ob7 {
+	/* 선물 */
+	left: 368px;
+	top: 265px;
+	animation: toBottom 0.3s 2.9s both;
+
+}
+
+.ban_left .ob8 {
+	/* 박스 */
+	left: 354px;
+	top: 285px;
+	animation: toBottom 0.3s 3.0s both;
+}
+
+.ban_left .ob9 {
+	/* 가방 */
+	left: 410px;
+	top: 276px;
+	animation: toBottom 0.3s 3.2s both;
+}
+
+.ban_left .ob10 {
+	/* 바람 */
+	left: 501px;
+	top: 370px;
+	transform-origin: left top;
+	animation: baram 2s 3.4s linear infinite both;
+}
+
+.ban_left .ob11 {
+	/* 바람2 */
+	left: 501px;
+	top: 370px;
+	transform-origin: left top;
+	animation: baram 2s 3.2s linear infinite both;
+}
+
+.ban_left .ob12 {
+	/* 원 */
+	left: 485px;
+	top: 119px;
+	animation: rotate 3s linear infinite;
+}
+
+.ban_left .ob13 {
+	/* 써프라이즈 */
+	left: 378px;
+	top: 189px;
+	animation: baram 3s 4s both;
+	transform-origin: left center;
+}
+
+
+.ban_right {
+	width: 600px;
+	position: absolute;
+	right: 0;
+	top: 50px;
+
+}
+
+.ban_right .br_tit {
+	background-color: #fff;
+	padding: 45px 0 43px 100px;
+}
+
+.ban_right .br_tit h3 {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 44px;
+	letter-spacing: -1px;
+}
+
+.ban_right .br_tit p {
+	padding-top: 50px;
+	font-size: 14px;
+	position: relative;
+}
+
+.ban_right .br_tit p::before {
+	content: "";
+	position: absolute;
+	top: 24px;
+	left: 0;
+	width: 30px;
+	height: 2px;
+	background-color: #00907f;
+}
+
+.ban_right .br_tit p strong {}
+
+
+.ban_right .login_btn {
+	position: absolute;
+	right: 60px;
+	top: 55px;
+}
+
+.ban_right .login_btn ul {}
+
+.ban_right .login_btn ul li {}
+
+.ban_right .login_btn ul li a {
+	display: block;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+}
+
+.ban_right .login_btn ul li.lb1 {
+	margin-bottom: 1px;
+
+}
+
+.ban_right .login_btn ul li.lb1 a {
+	background: #db3360 url(../img/ico_login.png) no-repeat center 18px;
+	padding-top: 50px;
+	box-sizing: border-box;
+	transition: 0.3s;
+}
+
+.ban_right .login_btn ul li.lb1 a:hover {
+	background-color: #c4204c;
+}
+
+.ban_right .login_btn ul li.lb2 a {
+	background-color: #3c3f44;
+	line-height: 80px;
+	transition: 0.3s;
+}
+
+.ban_right .login_btn ul li.lb2 a:hover {
+	background-color: #333;
+}
+
+
+.ban_right .br_btn {
+	background-color: #00907f;
+	height: 50px;
+	margin-top: 25px;
+}
+
+.ban_right .br_btn ul {}
+
+.ban_right .br_btn ul li {
+	float: left;
+	width: 25%;
+	text-align: center;
+	font-size: 14px;
+	line-height: 50px;
+	position: relative;
+}
+
+.ban_right .br_btn ul li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 17px;
+	width: 1px;
+	height: 18px;
+	background-color: #62bdb1;
+}
+
+.ban_right .br_btn ul li:first-child::before {
+	width: 0;
+	height: 0;
+}
+
+.ban_right .br_btn ul li a {
+	display: block;
+	color: #fff;
+}
+
+
+/* nav */
+#nav {
+	position: absolute;
+	left: 0;
+	top: -50px;
+	width: 100%;
+	font-family: 'Hana2.0 B';
+	background-color: #fff;
+	border-bottom: 1px solid #e6e6e6;
+	padding: 30px 0;
+}
+
+#nav .gnb {
+	padding-left: 60px;
+}
+
+#nav .gnb li {
+	display: inline;
+	padding: 10px;
+}
+
+#nav .gnb li a {
+	font-size: 17px;
+	display: inline-block;
+	padding: 10px 16px;
+	transition: 0.3s;
+}
+
+#nav .gnb li a:hover {
+	background-color: #00907f;
+	color: #fff;
+	border-radius: 3px;
+}
+
+#nav .gnb_right {
+	position: absolute;
+	right: 50px;
+	top: 30px;
+}
+
+#nav .gnb_right li {
+	float: left;
+}
+
+/* 자식에게 플룻을 줬는데 부모가 픽서드, 앱솔루트면 깨지지 않는다 */
+
+#nav .gnb_right li a {
+	display: block;
+	padding: 11px 20px;
+	font-size: 14px;
+}
+
+#nav .gnb_right .gr1 {
+	margin-right: 10px;
+}
+
+#nav .gnb_right .gr1 a {
+	border: 1px solid #e1e1e1;
+	border-radius: 3px;
+	transition: 0.3s;
+}
+
+#nav .gnb_right .gr1 a:hover {
+	background-color: #f4f4f4;
+	color: #000;
+}
+
+#nav .gnb_right .gr2 a {
+	background-color: #404b57;
+	color: #fff;
+	border-radius: 3px;
+	transition: 0.3s;
+	border: 1px solid #404b57;
+}
+
+#nav .gnb_right .gr2 a:hover {
+	background-color: #000;
+	border-color: #000;
+}
+
+#nav .gnb_right .gr2 a i {
+	margin-left: 7px;
+}
+
+
+#nav .gnb_search {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	right: 285px;
+	top: 25px;
+	background: url(../img/gnb_search.png) no-repeat;
+}
+
+
+#nav .gnb_event {
+	position: absolute;
+	left: 20px;
+	top: -35px;
+	background-color: #3c3f44;
+	color: #fff;
+	font-size: 14px;
+	line-height: 30px;
+	text-transform: uppercase;
+	padding: 3px 23px 2px;
+}
+
+#nav .gnb_event i {
+	padding-left: 10px;
+}
+
+
+/* card */
+#card {
+	padding-top: 60px;
+}
+
+#card>div {
+	float: left;
+	width: 50%;
+	height: 285px;
+}
+
+#card .card_img {
+	background-color: #fff;
+}
+
+#card .card_desc {
+	background-color: #eaebef;
+}
+
+
+/* card_img */
+#card .card_img {
+	box-sizing: border-box;
+	padding: 18px 47px 0;
+	position: relative;
+}
+
+#card .card_img h4 {
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 11px;
+}
+
+#card .card_img .card_banner {}
+
+#card .card_img .card_banner ul {}
+
+#card .card_img .card_banner ul li {
+	float: left;
+	width: 146px;
+	text-align: center;
+	margin-right: 30px;
+}
+
+#card .card_img .card_banner ul li:last-child {
+	margin-right: 0;
+}
+
+#card .card_img .card_banner ul li a {}
+
+#card .card_img .card_banner ul li a img {
+	width: 100%;
+}
+
+#card .card_img .card_banner ul li a em {
+	display: block;
+	padding-top: 8px;
+	font-size: 14px;
+}
+
+#card .card_img .card_link {
+	margin-top: 30px;
+}
+
+#card .card_img .card_link ul {}
+
+#card .card_img .card_link ul li {
+	float: left;
+	margin-right: 13px
+}
+
+#card .card_img .card_link ul li:last-child {
+	margin-right: 0;
+}
+
+#card .card_img .card_link ul li a {
+	display: block;
+	padding: 10px 11px;
+	font-size: 15px;
+	border: 1px solid #e8e8e8;
+	transition: 0.3s;
+}
+
+#card .card_img .card_link ul li a:hover {
+	color: #00907f;
+	border-color: #666;
+}
+
+#card .card_img .cardmore_btn {
+	position: absolute;
+	right: -31px;
+	top: 65px;
+	width: 31px;
+	height: 144px;
+	background: url(../img/btn_card_v01.png);
+}
+
+
+/* card_desc */
+#card .card_desc {
+	text-align: center;
+	padding-top: 50px;
+	box-sizing: border-box;
+}
+
+#card .card_desc dl {}
+
+#card .card_desc dl dt {
+	font-size: 15px;
+	color: #777;
+	font-weight: 500;
+}
+
+#card .card_desc dl dd {}
+
+#card .card_desc dl dd.cd1 {
+	font-size: 23px;
+	margin: 26px 0 45px;
+}
+
+#card .card_desc dl dd.cd1::before,
+#card .card_desc dl dd.cd1::after {
+	content: '"';
+	color: #00907f;
+}
+
+#card .card_desc dl dd.cd2 {}
+
+#card .card_desc dl dd.cd2 ul {}
+
+#card .card_desc dl dd.cd2 ul li {
+	display: inline;
+}
+
+#card .card_desc dl dd.cd2 ul li a {
+	display: inline-block;
+	background-color: #fff;
+	border: 1px solid #fff;
+	padding: 8px 30px;
+	transition: 0.3s;
+}
+
+#card .card_desc dl dd.cd2 ul li a:hover {
+	border: 1px solid #bbb;
+}
+
+
+/* event */
+#event {
+	text-align: center;
+	margin-top: 10px;
+}
+
+#event>div {
+	float: left;
+}
+
+
+/* event_box1 */
+/* 이미지와 글자가 있으면 글자가 움직여야하고 글자는 패딩으로 움직인다 */
+.event_box1 {}
+
+.event_box1>div {
+	width: 300px;
+	height: 188px;
+	box-sizing: border-box;
+	padding-top: 110px;
+}
+
+.event_box1 .eb_desc {
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.event_box1 .eb_tit {
+	font-size: 20px;
+}
+
+.event_box1 .eb_banner1 {
+	background: #01937F url(../img/event_icon1.png) no-repeat center
+		/* 좌우 */
+		top 25px;
+}
+
+.event_box1 .eb_banner2 {
+	background: #766e9c url(../img/event_icon2.png) no-repeat center
+		/* 좌우 */
+		top 25px;
+}
+
+.event_box1 .eb_banner3 {
+	background: #43587d url(../img/event_icon3.png) no-repeat center
+		/* 좌우 */
+		top 25px;
+}
+
+
+/* event_box2 */
+.event_box2 {
+	position: relative;
+	width: 600px;
+	height: 276px;
+	background-color: #fff;
+}
+
+.event_box2 .eb_icon {
+	position: absolute;
+	left: 60px;
+	top: 60px;
+}
+
+.event_box2 .eb_icon ul {}
+
+.event_box2 .eb_icon ul li {
+	float: left;
+}
+
+/* a태그에 블록요소 주면 부모는 자식의 공간을 따라가므로 같은 공간을 가진다 */
+.event_box2 .eb_icon ul li a {
+	display: block;
+	font-size: 13px;
+	padding: 3px 12px;
+}
+
+.event_box2 .eb_icon ul li.ei1{margin-right: 8px;}
+.event_box2 .eb_icon ul li.ei1 a {
+	background-color: #00907f;
+	border: 1px solid #00907f;
+	color: #fff;
+	transition: 0.3s;
+}
+
+.event_box2 .eb_icon ul li.ei1 a:hover {
+	background-color: #007668;
+	border-color: #007668;
+}
+
+.event_box2 .eb_icon ul li.ei2 a {
+	border: 1px solid #ccc;
+	color: #000;
+	transition: 0.3s;
+}
+.event_box2 .eb_icon ul li.ei2 a:hover{
+	border-color: #000;
+	color: #000
+}
+
+.event_box2 .eb_icon ul li a i {padding-left: 8px;}
