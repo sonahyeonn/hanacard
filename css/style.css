@@ -1468,11 +1468,12 @@ font-family: 'Noto Sans KR', sans-serif; */
 	padding-left: 20px;
 }
 
-.sns_icon {}
-
-.sns_icon li {
-	display: inline;
+.sns_icon {
 	position: absolute;
 	right: 0;
 	top: 76px;
+}
+
+.sns_icon li {
+	display: inline;
 }
